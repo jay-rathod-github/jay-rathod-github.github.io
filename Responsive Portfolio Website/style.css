@@ -35,7 +35,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .projects, .skills, .teams, .contact, footer{
+.about, .projects, .skills, .otherdetails, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -258,16 +258,16 @@ section .title::after{
 }
 
 /* projects section styling */
-.projects, .teams{
+.projects, .otherdetails{
     color:#fff;
     background: #111;
 }
 .projects .title::before,
-.teams .title::before{
+.otherdetails .title::before{
     background: #fff;
 }
 .projects .title::after,
-.teams .title::after{
+.otherdetails .title::after{
     background: #111;
     content: "";
 } 
@@ -395,11 +395,11 @@ section .title::after{
 }
 
 
-/* teams section styling */
-.teams .title::after{
+/* otherdetails section styling */
+.otherdetails .title::after{
     content: "who with me";
 }
-.teams .carousel .card{
+.otherdetails .carousel .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -407,25 +407,25 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.otherdetails .carousel .card:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.otherdetails .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.otherdetails .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.otherdetails .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.otherdetails .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -433,7 +433,7 @@ section .title::after{
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.otherdetails .carousel .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
