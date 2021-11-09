@@ -266,11 +266,11 @@ section .title::after{
 .teams .title::before{
     background: #fff;
 }
-/* .projects .title::after,
+.projects .title::after,
 .teams .title::after{
     background: #111;
-    content: "Side projects and mini projects";
-} */
+    content: "";
+} 
 .projects .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
@@ -306,10 +306,11 @@ section .title::after{
 /* skills section styling */
 
 .skills .title::after{
-    content: "what i know";
+    content: "";
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    width: calc(100% - 30px);
+    text-align: center;
 }
 .skills .skills-content .left .text{
     font-size: 20px;
@@ -349,7 +350,7 @@ section .title::after{
     font-size: 18px;
 }
 .skills .skills-content .right .line{
-    height: 5px;
+    height: 10px;
     width: 100%;
     background: lightgrey;
     position: relative;
@@ -362,21 +363,37 @@ section .title::after{
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
+.skills-content .right .java::before{
     width: 90%;
 }
-.skills-content .right .css::before{
+.skills-content .right .spring::before{
     width: 60%;
 }
-.skills-content .right .js::before{
-    width: 80%;
+.skills-content .right .python::before{
+    width: 60%;
 }
-.skills-content .right .php::before{
+.skills-content .right .django::before{
     width: 50%;
+}
+.skills-content .right .javascript::before{
+    width: 50%;
+}
+.skills-content .right .react::before{
+    width: 40%;
+}
+.skills-content .right .node::before{
+    width: 40%;
 }
 .skills-content .right .mysql::before{
     width: 70%;
 }
+.skills-content .right .mongo::before{
+    width: 50%;
+}
+.skills-content .right .php::before{
+    width: 20%;
+}
+
 
 /* teams section styling */
 .teams .title::after{
