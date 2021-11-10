@@ -165,7 +165,8 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
+    background: #111;
+    /* background: url("images/banner.jpg") no-repeat center; */
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -215,7 +216,7 @@ section .title::after{
 
 /* about section styling */
 .about .title::after{
-    content: "Summary";
+    content: "";
 }
 .about .about-content .left{
     width: 45%;
@@ -261,6 +262,7 @@ section .title::after{
 .projects, .otherdetails{
     color:#fff;
     background: #111;
+    /* this is for background */
 }
 .projects .title::before,
 .otherdetails .title::before{
@@ -460,7 +462,7 @@ section .title::after{
 
 /* contact section styling */
 .contact .title::after{
-    content: "get in touch";
+    content: "";
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
