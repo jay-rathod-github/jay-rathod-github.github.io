@@ -397,7 +397,7 @@ section .title::after{
 
 /* otherdetails section styling */
 .otherdetails .title::after{
-    content: "who with me";
+    content: "";
 }
 .otherdetails .carousel .card{
     background: #222;
