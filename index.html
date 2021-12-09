@@ -5,10 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" -->
     <title>Jay's Personal site</title>
     <link rel="shortcut icon" type="image/svg" href="images/jaylogo.svg" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scrollbar.css">
+    <link rel="stylesheet" href="custompointer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -19,6 +23,14 @@
 </head>
 
 <body>
+    <!-- <div id="follower">
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+    </div> -->
+    <!-- MAGIC CURSOR -->
+    <div style="z-index: 1000;" class="cursor"></div>
+    <div style="z-index: 1000;" class="cursor2"></div>
+    <!-- /MAGIC CURSOR -->
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -46,9 +58,11 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Jay Rathod</div>
                 <div class="text-3">I'm a <span class="typing"></span></div>
-                <a style="color: inherit;" target="_blank" href="mailto:jayneversettle@gmail.com"><img src="images/letter.svg" width="110" height="80"> </a>
+                <a style="color: inherit;" target="_blank" href="mailto:jayneversettle@gmail.com"><img
+                        src="images/letter.svg" width="110" height="80"> </a>
             </div>
         </div>
+
     </section>
 
     <!-- about section start -->
@@ -57,12 +71,14 @@
             <h2 class="title">About</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img style="   border-radius: 50%; width: 20rem; height: 20rem; padding: 10px; border: 5px solid #fff; background-color: black; margin: 0.5rem;" src="images/profile-1.png" alt="Jay Rathod's profile photo">
+                    <img style="   border-radius: 50%; width: 20rem; height: 20rem; padding: 10px; border: 5px solid #fff; background-color: black; margin: 0.5rem;"
+                        src="images/profile-1.png" alt="Jay Rathod's profile photo">
                 </div>
                 <div class="column right">
                     <div class="text">I am Jay, a <span class="typing-2"></span></div>
                     <p>I am pursuing my BS in Computer Science, My expected year of graduation is April 2022. I have
-                        developed several products using different technology stacks that include Python, Java and JavaScript
+                        developed several products using different technology stacks that include Python, Java and
+                        JavaScript
                         frameworks and libraries. I believe, I am a quick learner and a good problem solver.</p>
                     <a target="_blank"
                         href="https://drive.google.com/file/d/1h_TcNPI4MPDk6Oy4W-YNjUOoh5qUUzVg/view?usp=sharing">Download
@@ -78,7 +94,111 @@
             <h2 class="title">Experiences</h2>
             <div class="serv-content">
 
-                <div class="card" style="margin-bottom:1%;">
+
+                <!-- The timeline ui starts here -->
+                <div class="timeline">
+
+                    <div><h2 class="timeline__item timeline__item--year">...</h2></div>
+
+
+                    <div class="timeline__item">
+                        <h3 class="timeline__title">Simform</h3>
+                        <h3 class="timeline__title__genre">Experience</h3>
+                        <p class="timeline__blurb">Working with Java backend.</p>
+                        <div style="padding-top: inherit;">
+                            <div style=" text-align: center; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div><h2 class="timeline__item timeline__item--year">December 2021</h2></div>
+
+                    <div class="timeline__item">
+                        <h3 class="timeline__title">E-commerce application</h3>
+                        <h3 class="timeline__title__genre">Project</h3>
+                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                        <p class="timeline__blurb">Created an E-commerce website using React JS, Spring Boot and SQL
+                            database.</p>
+                        <div style="padding-top: inherit;">
+                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                            <div style=" text-align: center; position: relative;">
+                                <img src="images/react.svg" width="110" height="50">
+                                <img src="images/spring.svg" width="50" height="50">
+                                <img src="images/postgre.svg" width="110" height="50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="  padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">May 2021</h2></div>
+                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">July 2021</h2></div>
+
+                    <div class="timeline__item">
+                        <h3 class="timeline__title">AM/NS India</h3>
+                        <h3 class="timeline__title__genre">Internship</h3>
+                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                        <p class="timeline__blurb">Created complaint management module using React JS and Django.</p>
+                        <div style="padding-top: inherit;">
+                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                            <div style=" text-align: center; position: relative;">
+                                <img src="images/django.svg" width="110" height="50">
+                                <img src="images/react.svg" width="110" height="50">
+                                <img src="images/mysql.svg" width="110" height="50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="  padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">June 2021</h2></div>
+                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">August 2020</h2></div>
+
+                    <div class="timeline__item">
+                        <h3 class="timeline__title">Plant Disease Classification</h3>
+                        <h3 class="timeline__title__genre">Project</h3>
+                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                        <p class="timeline__blurb">Used PlantVillage dataset that includes 38 classes of plants and it's
+                            diseases. Used CNN to create a model and deployed it using Node JS.</p>
+                        <div style="padding-top: inherit;">
+                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                            <div style=" text-align: center; position: relative;">
+                                <img src="images/keras.svg" width="110" height="50">
+                                <img src="images/node.svg" width="110" height="50">
+                                <img src="images/python.svg" width="110" height="50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="  padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">July 2020</h2></div>
+
+                    <!-- <div style="  padding-top: 25px; padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">June 2020</h2></div> -->
+                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">June 2020</h2></div>
+
+                    <div class="timeline__item">
+                        <h3 class="timeline__title">NGO medicine portal</h3>
+                        <h3 class="timeline__title__genre">Project</h3>
+                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                        <p class="timeline__blurb">Created a web application that manages and verifies donated
+                            medicines.</p>
+                        <div style="padding-top: inherit;">
+                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                            <div style=" text-align: center; position: relative;">
+                                <img src="images/php.svg" width="110" height="50">
+                                <img src="images/mysql.svg" width="110" height="50">
+                                <img src="images/javascript.svg" width="110" height="50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="timeline__item timeline__item--year">April 2020</h2>
+                    <!-- <section>
+                    </section>
+                    <h2 class="timeline__item timeline__item--year">April 2020</h2> -->
+
+                </div>
+
+                <!-- <div class="card" style="margin-bottom:1%;">
                     <a style="color: inherit;" target="_blank"
                         href="https://github.com/iamsde836869/ecommerce-springboot-react">
                         <div class="box">
@@ -133,7 +253,7 @@
                             <p style="padding-top: 10px; text-align: center;">Created an NGO medicine portal that manages and verifies donated medicines.</p>
                         </div>
                     </a>
-                </div>
+                </div> -->
                 <!-- <div class="card" style="margin-bottom: 1%;">
                     <div class="box">
                         <div class="text">Apps Design</div>
@@ -154,7 +274,7 @@
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My skills</h2>
+            <h2 class="title">Skills</h2>
             <div class="skills-content">
                 <!-- <div class="column left">
                     <div class="text">My creative skills & experiences</div>
@@ -275,12 +395,11 @@
                     </a>
                 </div>
 
-                <div class="card">
+                <!-- <div class="card">
                     <a style="color: inherit;" target="_blank" href="https://medium.com/@jayneversettle">
                         <div class="box">
                             <img src="images/medium.svg" alt="">
                             <div class="text">Medium</div>
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                         </div>
                     </a>
                 </div>
@@ -293,7 +412,7 @@
                             <p>OverLeaf is an online LaTeX editor that contains templates of resumes.</p>
                         </div>
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -320,7 +439,8 @@
                             <img src="images/mars.svg" width="50" height="50">
                             <div class="info">
                                 <div class="head">Address</div>
-                                <div class="sub-title" style="color: crimson;"><b>Aspiring permanent resident of Mars</b></div>
+                                <div class="sub-title" style="color: crimson;"><b>Aspiring permanent resident of
+                                        Mars</b></div>
                             </div>
                         </div>
                         <div class="row">
@@ -352,8 +472,11 @@
     <!-- footer section start -->
     <footer>
         <span>Made by <a target="_blank" href="https://linktr.ee/jayneversettle"><b>Jay Rathod</b></a> | <span
-                class="far fa-copyright"></span><a href="https://github.com/iamsde836869/JayPersonalWebsite"><i><b>Source code for this site</b></i></a></span>
-        <!-- GIve the repository url for this source code -->
+                class="far fa-copyright"></span><a
+                href="https://github.com/iamsde836869/JayPersonalWebsite"><i><b>Source code for this
+                        site</b></i></a></span>
+        <!-- Give the repository url for this source code -->
+
     </footer>
     <script src="script.js"> </script>
 </body>

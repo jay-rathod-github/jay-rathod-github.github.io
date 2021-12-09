@@ -697,3 +697,148 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+/* This is the css for the experience */
+    
+  /* body {
+    background-image: linear-gradient(to bottom, #222, #444);
+    color: #bbb;
+    padding: 1rem;
+    font-family: "Playfair Display", serif;
+  } */
+  
+  .timeline {
+    position: relative;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  .timeline:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border: 1px solid crimson;
+    right: 40px;
+    top: 0;
+  }
+  .timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (min-width: 700px) {
+    .timeline {
+      padding: 2rem;
+    }
+    .timeline:before {
+      left: calc(50% - 1px);
+      right: auto;
+    }
+  }
+  
+  .timeline__item {
+    padding: 1rem;
+    border: 2px solid crimson;
+    border-image: linear-gradient(to right, #fbd72b 0%, crimson 100%);
+    border-image-slice: 1;
+    position: relative;
+    margin: 1rem 3rem 1rem 1rem;
+    clear: both;
+  }
+  .timeline__item:after, .timeline__item:before {
+    content: "";
+    position: absolute;
+  }
+  .timeline__item:before {
+    right: -10px;
+    top: calc(50% - 5px);
+    border-style: solid;
+    border-color: crimson crimson transparent transparent;
+    border-width: 10px;
+    transform: rotate(45deg);
+  }
+  @media screen and (min-width: 700px) {
+    .timeline__item {
+      width: 44%;
+      margin: 1rem;
+    }
+    .timeline__item:nth-of-type(2n) {
+      float: right;
+      margin: 1rem;
+      border-image: linear-gradient(to right, crimson 0%, #fbd72b 100%);
+      border-image-slice: 1;
+    }
+    .timeline__item:nth-of-type(2n):before {
+      right: auto;
+      left: -10px;
+      border-color: transparent transparent crimson crimson;
+    }
+  }
+  
+  .timeline__item--year {
+    text-align: center;
+    max-width: fit-content;
+    margin: 0 48px 0 auto;
+    font-size: 1.8rem;
+    background-color: #111;
+    line-height: 1;
+    border-image: none;
+    padding: 0.5rem 1rem 1rem;
+  }
+  .timeline__item--year:before {
+    display: none;
+  }
+  @media screen and (min-width: 700px) {
+    .timeline__item--year {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .timeline__item--year:nth-of-type(2n) {
+      float: none;
+      margin: 0 auto;
+      border-image: none;
+    }
+    .timeline__item--year:nth-of-type(2n):before {
+      display: none;
+    }
+  }
+  
+  .timeline__title {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+  }
+    
+  .timeline__title__genre {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
+  }
+
+  .timeline__title__date {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
+  }
+  
+  .timeline__blurb {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+  }
+
+/* Cartoon */
+  svg{
+    margin:auto;
+  }
+  .l-pupil{
+    position:relative;
+    transform-origin:105px 78px;
+  /*   transform:  rotate(390deg); */
+  /*   transform-origin: 20px center; */
+  }
+  .r-pupil{
+    position:relative;
+    transform-origin:160px 78px;
+  /*   transform:  rotate(390deg); */
+  /*   transform-origin: 20px center; */
+  }
