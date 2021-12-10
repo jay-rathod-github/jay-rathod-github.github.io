@@ -9,6 +9,13 @@
 }
 html{
     scroll-behavior: smooth;
+    cursor:none;
+    /* cursor: pointer; */
+}
+
+html *{
+    cursor: default;    
+    cursor:none;
 }
 
 /* custom scroll bar */
@@ -35,11 +42,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .projects, .skills, .otherdetails, .contact, footer{
+.about, .work, .skills, .otherdetails, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.projects .serv-content,
+.work .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -258,22 +265,22 @@ section .title::after{
     background: none;
 }
 
-/* projects section styling */
-.projects, .otherdetails{
+/* work section styling */
+.work, .otherdetails{
     color:#fff;
     background: #111;
     /* this is for background */
 }
-.projects .title::before,
+.work .title::before,
 .otherdetails .title::before{
     background: #fff;
 }
-.projects .title::after,
+.work .title::after,
 .otherdetails .title::after{
     background: #111;
     content: "";
 } 
-.projects .serv-content .card{
+.work .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -282,24 +289,24 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.projects .serv-content .card:hover{
+.work .serv-content .card:hover{
     background: crimson;
 }
-.projects .serv-content .card .box{
+.work .serv-content .card .box{
     transition: all 0.3s ease;
 }
-.projects .serv-content .card:hover .box{
+.work .serv-content .card:hover .box{
     transform: scale(1.05);
 }
-.projects .serv-content .card i{
+.work .serv-content .card i{
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
-.projects .serv-content .card:hover i{
+.work .serv-content .card:hover i{
     color: #fff;
 }
-.projects .serv-content .card .text{
+.work .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -638,7 +645,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .projects .serv-content .card{
+    .work .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -662,7 +669,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .projects .serv-content .card{
+    .work .serv-content .card{
         width: 100%;
     }
 }
@@ -716,7 +723,9 @@ footer span a:hover{
     content: "";
     position: absolute;
     height: 100%;
-    border: 1px solid crimson;
+    /* border-left: 5px solid; */
+    border-left: 3px solid red;
+    /* border-left: 5px solid linear-gradient(red, yellow); */
     right: 40px;
     top: 0;
   }
@@ -737,12 +746,18 @@ footer span a:hover{
   
   .timeline__item {
     padding: 1rem;
-    border: 2px solid crimson;
-    border-image: linear-gradient(to right, #fbd72b 0%, crimson 100%);
+    border: 3px solid red;
+    /* border-image: linear-gradient(to left, yellow 0%,  orange 100%, yellow 100%); */
+
+    /* these are for dates */
+    background-color: black;
+    border-image: linear-gradient(to left, red 0%,  orange 100%, yellow 100%);
+    /* left information */
     border-image-slice: 1;
     position: relative;
     margin: 1rem 3rem 1rem 1rem;
     clear: both;
+    /* border-radius: 4px; */
   }
   .timeline__item:after, .timeline__item:before {
     content: "";
@@ -752,7 +767,8 @@ footer span a:hover{
     right: -10px;
     top: calc(50% - 5px);
     border-style: solid;
-    border-color: crimson crimson transparent transparent;
+    border-color: red red transparent transparent;
+    /* these are the left arrows color */
     border-width: 10px;
     transform: rotate(45deg);
   }
@@ -764,22 +780,25 @@ footer span a:hover{
     .timeline__item:nth-of-type(2n) {
       float: right;
       margin: 1rem;
-      border-image: linear-gradient(to right, crimson 0%, #fbd72b 100%);
+      border-image: linear-gradient(to right, red 0%,  orange 100%, yellow 100%);
+      /* these are for right information box */
       border-image-slice: 1;
     }
     .timeline__item:nth-of-type(2n):before {
       right: auto;
       left: -10px;
-      border-color: transparent transparent crimson crimson;
+      border-color: transparent transparent red red;
+        /* these are for right arrow */
     }
   }
   
   .timeline__item--year {
+
     text-align: center;
     max-width: fit-content;
     margin: 0 48px 0 auto;
     font-size: 1.8rem;
-    background-color: #111;
+    background-color: black;
     line-height: 1;
     border-image: none;
     padding: 0.5rem 1rem 1rem;
