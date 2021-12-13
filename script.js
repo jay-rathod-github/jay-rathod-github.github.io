@@ -19,15 +19,7 @@
         x: mouseX(event),
         y: mouseY(event)
       };
-      // follower.style.top = mouse.y + 'px';
-      try {
-        follower.style.top = mouse.y + 'px';
-
-      }
-      catch(err) {
-        console.error("Ignore this error the code works just fine: Uncaught TypeError: Cannot read properties of null (reading 'style')");
-      //  console.log("Ignore this error the code works just fine: Uncaught TypeError: Cannot read properties of null (reading 'style')");
-      }
+      follower.style.top = mouse.y + 'px';
       return follower.style.left = mouse.x + 'px';
     };
   
