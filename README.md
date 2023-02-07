@@ -3,4 +3,4 @@ Personal website created using HTML, JavaScript and CSS
 
 
 
-Link: https://neversettlejay.github.io/JayPersonalWebsite/#
+Link: https://jay-rathod-github.github.io/
