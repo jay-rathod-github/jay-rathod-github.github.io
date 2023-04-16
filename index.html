@@ -26,11 +26,12 @@
         <div id="circle2"></div>
     </div> -->
     <!-- MAGIC CURSOR -->
-    <div style="z-index: 10000;" class="cursor">  <div  style="z-index: 10000;" class="cursor-inner"></div>
-</div>
+    <div style="z-index: 10000;" class="cursor">
+        <div style="z-index: 10000;" class="cursor-inner"></div>
+    </div>
 
     <div style="z-index: 10000;" class="cursor2"></div>
-    
+
     <!-- /MAGIC CURSOR -->
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -66,43 +67,110 @@
 
     </section>
 
-<!-- about section start -->
-<section class="about" id="about">
-    <div class="max-width">
-      <h2 class="title">About</h2>
-      <div class="about-content">
-        <div class="column left">
-            <img style="border-radius: 50px 50px 20px 50px; width: 20rem; height: 20rem; padding: 10px; border: 5px solid #fff; background-color: black; margin: 0.5rem; transition: all 0.3s ease-in-out;" src="images/profile-1.png" alt="Jay Rathod's profile photo" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0px 0px 10px #fff';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-        </div>
-        <div class="column right">
-          <div class="text">I am Jay, a <span class="typing-2"></span></div>
-          <p>Currently a Software Engineer in an IT service and consulting firm working majorly with Spring Boot</p><br>
-          <div class="pdf-container">
-            <!-- <iframe src="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview" style="width:100%; height:800px; border: none;"></iframe> -->
-            <embed src="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview" width="100%" height="800" type="application/pdf">
-                <!-- <object data="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview" type="application/pdf" width="100%" height="800">
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About</h2>
+            <div class="about-content">
+                <div class="column left">
+
+
+
+
+                    <div id="slideshow-container"
+                        style="position: relative; width: 20rem; height: 20rem; margin: 0.5rem; border-radius: 50px 50px 20px 50px; box-shadow: 0 0 20px black; background-color: white;">
+                        <img id="slideshow-img"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50px 50px 20px 50px; z-index: 2;"
+                            src="https://drive.google.com/uc?id=15d6BVmmb3iFBkEmSfPNXo_aDRskZnH8e">
+                    </div>
+
+                    <style>
+                        #slideshow-img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50px 50px 20px 50px;
+                            border: 5px solid black;
+                            z-index: 2;
+                            transition: transform 0.5s ease-in-out;
+                        }
+
+                        #slideshow-container:hover img {
+                            transform: scale(1.2);
+                            cursor: pointer;
+                        }
+                    </style>
+
+                    <script>
+                        // Define an array of image URLs
+                        var images = [
+                            "https://drive.google.com/uc?id=15d6BVmmb3iFBkEmSfPNXo_aDRskZnH8e",
+                            "https://drive.google.com/uc?id=15X6G9ngXCwHEPiLIOlcOl2Ws1gvzXN-A",
+                            "https://drive.google.com/uc?id=15bMGpJzRljUXUQHYggezXknVkjQDyUrL"
+                        ];
+
+                        // Preload all images in the array
+                        images.forEach(function (url) {
+                            var img = new Image();
+                            img.src = url;
+                        });
+
+                        // Change the image when someone hovers over it
+                        var slideIndex = 0;
+                        var slideshowImg = document.getElementById("slideshow-img");
+                        slideshowImg.addEventListener("mouseover", function () {
+                            slideIndex = (slideIndex + 1) % images.length;
+                            slideshowImg.src = images[slideIndex];
+                        });
+                    </script>
+
+
+
+
+
+                    <!-- <img id="slideshow-img"
+                        style="border-radius: 50px 50px 20px 50px; width: 20rem; height: 20rem; padding: 10px; border: 5px solid #fff; background-color: black; margin: 0.5rem; transition: all 0.3s ease-in-out;"
+                        src="images/profile-1.png" alt="Jay Rathod's profile photo"
+                        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0px 0px 10px #fff';"
+                        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"> -->
+
+                    <!-- <img style="border-radius: 50px 50px 20px 50px; width: 20rem; height: 20rem; padding: 10px; border: 5px solid #fff; background-color: black; margin: 0.5rem; transition: all 0.3s ease-in-out;" src="images/profile-1.png" alt="Jay Rathod's profile photo" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0px 0px 10px #fff';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"> -->
+                </div>
+                <div class="column right">
+                    <div class="text">I am Jay, a <span class="typing-2"></span></div>
+                    <p>Currently a Software Engineer in an IT service and consulting firm working majorly with Spring
+                        Boot</p><br>
+                    <div class="pdf-container">
+                        <!-- <iframe src="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview" style="width:100%; height:800px; border: none;"></iframe> -->
+                        <embed src="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview"
+                            width="100%" height="800" type="application/pdf">
+                        <!-- <object data="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview" type="application/pdf" width="100%" height="800">
                     <p>This browser does not support PDF embedding</p>
                   </object> -->
-        
-                    <!-- Note to display in embedded tag :
+
+                        <!-- Note to display in embedded tag :
                       form this url:  https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/view?usp=sharing
                         remove : view?usp=sharing
                         and add: /preview
                     -->
 
-            <div class="download-container">
-              <a class="download-button" target="_blank" href="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/view?usp=sharing">Download résumé</a>
+                        <div class="download-container">
+                            <a class="download-button" target="_blank"
+                                href="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/view?usp=sharing">Download
+                                résumé</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
 
-  
-      
-      
+
+
+
 
 
     <!-- work section start -->
@@ -114,119 +182,139 @@
 
                 <!-- The timeline ui starts here -->
                 <div class="timeline">
-                    
-                    
-                    <div><h2 class="timeline__item timeline__item--year">...</h2></div>
+
+
+                    <div>
+                        <h2 class="timeline__item timeline__item--year">...</h2>
+                    </div>
 
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                        href="https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing">
-                        <!-- https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing -->
-                        <h3 class="timeline__title">Simform</h3>
-                        <h3 class="timeline__title__genre">Work</h3>
-                        <p class="timeline__blurb">Working with Java backend.</p>
-                        <div style="padding-top: inherit;">
-                            <div style=" text-align: center; position: relative;">
+                            href="https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing">
+                            <!-- https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing -->
+                            <h3 class="timeline__title">Simform</h3>
+                            <h3 class="timeline__title__genre">Work</h3>
+                            <p class="timeline__blurb">Working with Java backend.</p>
+                            <div style="padding-top: inherit;">
+                                <div style=" text-align: center; position: relative;">
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
-                    <div><h2 class="timeline__item timeline__item--year">December 2021</h2></div>
+                    <div>
+                        <h2 class="timeline__item timeline__item--year">December 2021</h2>
+                    </div>
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                        href="https://github.com/neversettlejay/ecommerce-springboot-react">
-                        <h3 class="timeline__title">E-commerce application</h3>
-                        <h3 class="timeline__title__genre">Project</h3>
-                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
-                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                        <p class="timeline__blurb">Created an E-commerce website using React JS, Spring Boot and SQL
-                            database.</p>
-                        <div style="padding-top: inherit;">
-                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
-                            <div style=" text-align: center; position: relative;">
-                                <img src="images/react.svg" width="110" height="50">
-                                <img src="images/spring.svg" width="50" height="50">
-                                <img src="images/postgre.svg" width="110" height="50">
+                            href="https://github.com/neversettlejay/ecommerce-springboot-react">
+                            <h3 class="timeline__title">E-commerce application</h3>
+                            <h3 class="timeline__title__genre">Project</h3>
+                            <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                            <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                            <p class="timeline__blurb">Created an E-commerce website using React JS, Spring Boot and SQL
+                                database.</p>
+                            <div style="padding-top: inherit;">
+                                <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                                <div style=" text-align: center; position: relative;">
+                                    <img src="images/react.svg" width="110" height="50">
+                                    <img src="images/spring.svg" width="50" height="50">
+                                    <img src="images/postgre.svg" width="110" height="50">
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
-                    <div style="  padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">May 2021</h2></div>
-                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">July 2021</h2></div>
+                    <div style="  padding-bottom: 25px;">
+                        <h2 class="timeline__item timeline__item--year">May 2021</h2>
+                    </div>
+                    <div style="  padding-top: 25px;">
+                        <h2 class="timeline__item timeline__item--year">July 2021</h2>
+                    </div>
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                        href="https://drive.google.com/file/d/1g5HO76BZ245bAYtdJv_vgi6HYgmYObxF/view?usp=sharing">
-                        <h3 class="timeline__title">AM/NS India</h3>
-                        <h3 class="timeline__title__genre">Internship</h3>
-                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
-                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                        <p class="timeline__blurb">Created complaint management module using React JS and Django.</p>
-                        <div style="padding-top: inherit;">
-                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
-                            <div style=" text-align: center; position: relative;">
-                                <img src="images/django.svg" width="110" height="50">
-                                <img src="images/react.svg" width="110" height="50">
-                                <img src="images/mysql.svg" width="110" height="50">
+                            href="https://drive.google.com/file/d/1g5HO76BZ245bAYtdJv_vgi6HYgmYObxF/view?usp=sharing">
+                            <h3 class="timeline__title">AM/NS India</h3>
+                            <h3 class="timeline__title__genre">Internship</h3>
+                            <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                            <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                            <p class="timeline__blurb">Created complaint management module using React JS and Django.
+                            </p>
+                            <div style="padding-top: inherit;">
+                                <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                                <div style=" text-align: center; position: relative;">
+                                    <img src="images/django.svg" width="110" height="50">
+                                    <img src="images/react.svg" width="110" height="50">
+                                    <img src="images/mysql.svg" width="110" height="50">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
 
-                    <div style="  padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">June 2021</h2></div>
-                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">August 2020</h2></div>
+                    <div style="  padding-bottom: 25px;">
+                        <h2 class="timeline__item timeline__item--year">June 2021</h2>
+                    </div>
+                    <div style="  padding-top: 25px;">
+                        <h2 class="timeline__item timeline__item--year">August 2020</h2>
+                    </div>
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                        href="https://github.com/neversettlejay/Plant_Disease_Classification">
-                        <h3 class="timeline__title">Plant Disease Classification</h3>
-                        <h3 class="timeline__title__genre">Project</h3>
-                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
-                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                        <p class="timeline__blurb">Used PlantVillage dataset that includes 38 classes of plants and it's
-                            diseases. Used CNN to create a model and deployed it using Node JS.</p>
-                        <div style="padding-top: inherit;">
-                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
-                            <div style=" text-align: center; position: relative;">
-                                <img src="images/keras.svg" width="110" height="50">
-                                <img src="images/node.svg" width="110" height="50">
-                                <img src="images/python.svg" width="110" height="50">
+                            href="https://github.com/neversettlejay/Plant_Disease_Classification">
+                            <h3 class="timeline__title">Plant Disease Classification</h3>
+                            <h3 class="timeline__title__genre">Project</h3>
+                            <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                            <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                            <p class="timeline__blurb">Used PlantVillage dataset that includes 38 classes of plants and
+                                it's
+                                diseases. Used CNN to create a model and deployed it using Node JS.</p>
+                            <div style="padding-top: inherit;">
+                                <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                                <div style=" text-align: center; position: relative;">
+                                    <img src="images/keras.svg" width="110" height="50">
+                                    <img src="images/node.svg" width="110" height="50">
+                                    <img src="images/python.svg" width="110" height="50">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
 
-                    <div style="  padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">July 2020</h2></div>
+                    <div style="  padding-bottom: 25px;">
+                        <h2 class="timeline__item timeline__item--year">July 2020</h2>
+                    </div>
 
                     <!-- <div style="  padding-top: 25px; padding-bottom: 25px;"><h2 class="timeline__item timeline__item--year">June 2020</h2></div> -->
-                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">June 2020</h2></div>
+                    <div style="  padding-top: 25px;">
+                        <h2 class="timeline__item timeline__item--year">June 2020</h2>
+                    </div>
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                        href="https://github.com/neversettlejay/NGO-medicine-portal">
-                        <h3 class="timeline__title">NGO medicine portal</h3>
-                        <h3 class="timeline__title__genre">Project</h3>
-                        <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
-                        <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                        <p class="timeline__blurb">Created a web application that manages and verifies donated
-                            medicines.</p>
-                        <div style="padding-top: inherit;">
-                            <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
-                            <div style=" text-align: center; position: relative;">
-                                <img src="images/php.svg" width="110" height="50">
-                                <img src="images/mysql.svg" width="110" height="50">
-                                <img src="images/javascript.svg" width="110" height="50">
+                            href="https://github.com/neversettlejay/NGO-medicine-portal">
+                            <h3 class="timeline__title">NGO medicine portal</h3>
+                            <h3 class="timeline__title__genre">Project</h3>
+                            <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
+                            <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
+                            <p class="timeline__blurb">Created a web application that manages and verifies donated
+                                medicines.</p>
+                            <div style="padding-top: inherit;">
+                                <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
+                                <div style=" text-align: center; position: relative;">
+                                    <img src="images/php.svg" width="110" height="50">
+                                    <img src="images/mysql.svg" width="110" height="50">
+                                    <img src="images/javascript.svg" width="110" height="50">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
 
                     <h2 class="timeline__item timeline__item--year">April 2020</h2>
-                    <div style="  padding-top: 25px;"><h2 class="timeline__item timeline__item--year">...</h2></div>
+                    <div style="  padding-top: 25px;">
+                        <h2 class="timeline__item timeline__item--year">...</h2>
+                    </div>
 
                     <!-- <section>
                     </section>
@@ -431,15 +519,16 @@
                     </a>
                 </div>
 
-                 <div class="card">
-                    <a style="color: inherit;" target="_blank" href="https://www.youtube.com/channel/UCnRq_xTyqiHnx8YjZ1Q7zrg">
+                <div class="card">
+                    <a style="color: inherit;" target="_blank"
+                        href="https://www.youtube.com/channel/UCnRq_xTyqiHnx8YjZ1Q7zrg">
                         <div class="box">
                             <img src="images/youtube.svg" alt="">
                             <div class="text">YouTube</div>
                         </div>
                     </a>
                 </div>
-<!--
+                <!--
                 <div class="card">
                     <a style="color: inherit;" target="_blank" href="https://www.overleaf.com/gallery/tagged/cv">
                         <div class="box">
