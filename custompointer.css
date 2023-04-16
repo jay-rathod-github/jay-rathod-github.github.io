@@ -1,38 +1,98 @@
+/* Style for the outer cursor circle */
 .cursor {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 3px solid black;
-  transition: all 200ms ease-out;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid black;
   position: fixed;
+  z-index: 9999;
   pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-}
-
-.cursor2 {
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  background-color: crimson;
-  border: 3px solid black;
-  opacity: 1;
-  position: fixed;
   transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
+/* Style for the inner cursor circle */
+.cursor-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: crimson;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Animation for the outer cursor circle */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Change cursor on hover */
+a:hover,
+button:hover {
+  cursor: none;
+}
 .hover {
   background-color: red;
   opacity: 0.5;
 }
 
-.cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: .5;
+/* Change inner cursor on hover */
+a:hover .cursor-inner,
+button:hover .cursor-inner {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-              
+
+
+/* Style for the rounded square cursor */
+.cursor2 {
+  width: 11px;
+  height: 11px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, #ff4c4c, crimson);
+  border: 3px solid black;
+  opacity: 1;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 10px; /* Set initial font size */
+  text-align: center;
+  line-height: 11px; /* Set line-height equal to height of cursor */
+}
+
+/* Change size and opacity on hover */
+.cursor2:hover {
+  width: 60px;
+  height: 60px;
+  opacity: 0.7;
+  animation: fadeInOut 1s ease-in-out infinite;
+  font-size: 20px; /* Increase font size */
+  line-height: 60px; /* Set line-height equal to height of cursor */
+}
+
+/* Animation for the rounded square cursor */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
