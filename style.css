@@ -376,32 +376,45 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .spring::before{
-    width: 60%;
+    width: 80%;
 }
 .skills-content .right .python::before{
-    width: 60%;
-}
-.skills-content .right .django::before{
-    width: 50%;
+    width: 70%;
 }
 .skills-content .right .javascript::before{
     width: 50%;
 }
-.skills-content .right .react::before{
-    width: 40%;
-}
-.skills-content .right .node::before{
-    width: 40%;
-}
-.skills-content .right .mysql::before{
+.skills-content .right .postgres::before{
     width: 70%;
 }
 .skills-content .right .mongo::before{
     width: 50%;
 }
-.skills-content .right .php::before{
+.skills-content .right .docker::before{
+    width: 70%;
+}
+.skills-content .right .kubernetes::before{
+    width: 50%;
+}
+.skills-content .right .aws::before{
     width: 20%;
 }
+.skills-content .right .microservices::before{
+    width: 60%;
+}
+.skills-content .right .designpatterns::before{
+    width: 30%;
+}
+.skills-content .right .systemdesign::before{
+    width: 20%;
+}
+.skills-content .right .machinelearning::before{
+    width: 30%;
+}
+.skills-content .right .grpc::before{
+    width: 30%;
+}
+
 
 
 /* otherdetails section styling */
