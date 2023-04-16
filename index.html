@@ -38,7 +38,7 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Veni, Vidi,<span> Vici</span></a></div>
+            <div class="logo"><a href="#">Jay<span> Rathod</span></a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
@@ -57,9 +57,9 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Jay Rathod</div>
-                <div class="text-3">I'm a <span class="typing"></span></div>
+                <!-- <div class="text-1">Software Engineer</div> -->
+                <div class="text-2">Software Engineer</div>
+                <div class="text-3"><span class="typing"></span></div>
                 <a style="color: inherit;" target="_blank" href="mailto:jayneversettle@gmail.com"><img
                         src="images/letter.svg" width="110" height="80"> </a>
             </div>
@@ -139,9 +139,40 @@
                     <!-- <img style="border-radius: 50px 50px 20px 50px; width: 20rem; height: 20rem; padding: 10px; border: 5px solid #fff; background-color: black; margin: 0.5rem; transition: all 0.3s ease-in-out;" src="images/profile-1.png" alt="Jay Rathod's profile photo" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0px 0px 10px #fff';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"> -->
                 </div>
                 <div class="column right">
-                    <div class="text">I am Jay, a <span class="typing-2"></span></div>
-                    <p>Currently a Software Engineer in an IT service and consulting firm working majorly with Spring
-                        Boot</p><br>
+                    <style>
+                        .introduction {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            height: 200px;
+                            /* Set a fixed height for the container */
+                        }
+
+                        .introduction>div {
+                            margin-bottom: 20px;
+                            /* Add a margin between the two divs */
+                        }
+
+                        .textIntro {
+                            text-align: inherit;
+                            max-width: 800px;
+                            /* Set a max width to prevent the text from becoming too wide */
+                            padding: 10px;
+                            background-color: #000;
+                            /* Add a background color to the text for better contrast */
+                            border-radius: 10px;
+                            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+                            /* Add a subtle box shadow for depth */
+                        }
+                    </style>
+
+                    <div class="textIntro text"><span class="typing-2" style="font-size: 20px;"></span></div>
+
+                    <div><br></div>
+
+                    <!-- <p>Currently a Software Engineer in an IT service and consulting firm working majorly with Spring
+                        Boot</p><br> -->
                     <div class="pdf-container">
                         <!-- <iframe src="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview" style="width:100%; height:800px; border: none;"></iframe> -->
                         <embed src="https://drive.google.com/file/d/17HzQaCeJkx21spJFY4VxyUs1K1uZ6Jfv/preview"
@@ -185,41 +216,260 @@
 
 
                     <div>
-                        <h2 class="timeline__item timeline__item--year">...</h2>
+                        <h2 class="timeline__item timeline__item--year">Present</h2>
+                    </div>
+
+                    <div class="timeline__item">
+
+                        <div class="popup-row-se">
+
+                            <script>
+                                var popupTriggerSe = document.querySelector('.popup-trigger-se');
+                                var popupContainerSe = document.querySelector('.popup-container-se');
+                                var popupTitleSe = popupContainerSe.querySelector('.popup-title-se');
+
+                                popupTriggerSe.addEventListener('mouseover', function () {
+                                    var links = popupContainerSe.querySelectorAll('a');
+                                    var html = '';
+                                    for (var i = 0; i < links.length; i++) {
+                                        var link = links[i];
+                                        var title = link.getAttribute('data-popup-title-se');
+                                        var href = link.getAttribute('href');
+                                        html += '<div class="popup-row-se"><a href="' + href + '">' + link.textContent + '</a><div class="popup-subtitle-se">' + title + '</div></div>';
+                                    }
+                                    popupContainerSe.querySelector('.popup-content-se').innerHTML = html;
+                                    popupContainerSe.style.display = 'block';
+                                });
+
+                                popupTriggerSe.addEventListener('mouseout', function () {
+                                    popupContainerSe.style.display = 'none';
+                                });
+
+                                popupContainerSe.addEventListener('mouseover', function () {
+                                    popupContainerSe.style.display = 'block';
+                                });
+
+                                popupContainerSe.addEventListener('mouseout', function () {
+                                    popupContainerSe.style.display = 'none';
+                                });
+
+                            </script>
+
+                            <style>
+                                .popup-container-se {
+                                    display: none;
+                                    position: absolute;
+                                    background-color: black;
+                                    color: white;
+                                    padding: 10px;
+                                    border: 2px solid white;
+                                    font-size: 16px;
+                                }
+
+                                .popup-title-se {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+                                }
+
+                                .popup-row-se {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 10px;
+                                }
+
+                                .popup-row-se a {
+                                    color: crimson;
+                                }
+
+                                .popup-subtitle {
+                                    font-size: 12px;
+                                    color: #bbb;
+                                    margin-top: 2px;
+                                }
+
+                                #se {
+                                    position: relative;
+                                }
+
+                                #se:hover::before {
+                                    content: "Due to Non-Disclosure Agreement, the source code can't be revealed";
+                                    display: block;
+                                    display: block;
+                                    position: absolute;
+                                    background-color: black;
+                                    color: white;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    top: -30px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    border: 2px solid white;
+                                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                                }
+                            </style>
+                            <div class="popup-trigger-se" id="se" style="color: inherit;" target="_blank">
+                                <!-- https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing -->
+                                <h3 class="timeline__title">Simform</h3>
+                                <h3 class="timeline__title__genre">Software Engineer</h3>
+                                <p class="timeline__blurb">I worked on an Invoicing Application using Spring Boot, which
+                                    involved implementing JWT for authentication and role-based access control for
+                                    authorization. To fetch project metadata, the Zoho Projects API was used, while
+                                    Intuit
+                                    QuickBooks was used to generate invoices, and Keka was used to fetch user metadata.
+                                    Java
+                                    Concurrency was used to enable concurrent API calls and processing. A CICD pipeline
+                                    was
+                                    created to automatically containerize and deploy the application on the ECS
+                                    instance.
+                                    For the database, AWS RDS was used as a relational database, while AWS S3 was used
+                                    to
+                                    store the media. Overall, this project provided experience in using various APIs,
+                                    setting up a CICD pipeline, and working with AWS services for data storage and
+                                    deployment, as well as utilizing Java Concurrency for optimizing API calls and
+                                    processing.</p>
+                                <div style="padding-top: inherit;">
+                                    <div style=" text-align: center; position: relative;">
+                                    </div>
+                                </div>
+                                <div class="popup-container-se">
+                                    <div class="popup-title-se">Due to Non-Disclosure Agreement, the source code can't
+                                        be
+                                        revealed</div>
+                                    <div class="popup-content-se"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="  padding-bottom: 25px;">
+                        <h2 class="timeline__item timeline__item--year">May 2022</h2>
+                    </div>
+                    <div style="  padding-top: 25px;">
+                        <h2 class="timeline__item timeline__item--year">April 2022</h2>
                     </div>
 
 
                     <div class="timeline__item">
-                        <a style="color: inherit;" target="_blank"
-                            href="https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing">
-                            <!-- https://drive.google.com/file/d/1HV7yR__rZ378X0yr5HAyLXQjJYYYlch1/view?usp=sharing -->
+                        <div class="popup-trigger-one">
                             <h3 class="timeline__title">Simform</h3>
-                            <h3 class="timeline__title__genre">Work</h3>
-                            <p class="timeline__blurb">Working with Java backend.</p>
+                            <h3 class="timeline__title__genre">Trainee Software Engineer</h3>
+                            <p class="timeline__blurb">I created an online bidding platform named Proffer. The platform
+                                utilized socket programming for real-time auctions, and a scheduler was implemented to
+                                load upcoming auction data. The frontend of the platform was built using JSP, while the
+                                backend was built using Spring Boot. Spring Security was used for authentication and
+                                authorization, and JWT and RBAC were used to manage user access control. PostgreSQL was
+                                used as the database to store auction and user information. Overall, this project
+                                provided valuable experience in web application development, real-time data processing,
+                                and user interface design using socket programming, JSP, Spring Boot, Spring Security,
+                                and PostgreSQL.</p>
                             <div style="padding-top: inherit;">
                                 <div style=" text-align: center; position: relative;">
                                 </div>
                             </div>
-                        </a>
+                        </div>
+
+
+
+
+                        <!-- for trainee software entineer -->
+                        <div class="popup-container-one">
+                            <div class="popup-content-one">
+                                <div class="popup-row-one">
+                                    <a href="https://github.com/neversettlejay/Proffer" target="_blank"><b>Source code</b></a>
+                                </div>
+                                <div class="popup-row-one"><a
+                                        href="https://drive.google.com/file/d/1WbE514wzqOd-dtnpsYRJxtWaMBJ1dbT6/view?usp=sharing" target="_blank"><b>Training
+                                        completion certificate</b></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <style>
+                            .popup-container-one {
+                                border-radius: 20px;
+                                border: radius 10px;
+                                border: 2px solid white;
+                                display: none;
+                                position: absolute;
+                                z-index: 1;
+                                background-color: #000;
+                                color: #fff;
+                                font-size: 16px;
+                                font-family: Arial, sans-serif;
+                                padding: 10px;
+                                width: 200px;
+                            }
+
+                            .popup-row-one {
+                                margin-bottom: 10px;
+                            }
+
+                            .popup-content-one a {
+                                color: #fff;
+                                text-decoration: none;
+                            }
+
+                            .popup-content-one a:hover {
+                                color: crimson;
+                            }
+                        </style>
+                        <script>
+
+                            var popupTriggerOne = document.querySelector('.popup-trigger-one');
+                            var popupContainerOne = document.querySelector('.popup-container-one');
+
+                            popupTriggerOne.addEventListener('mouseover', function () {
+                                popupContainerOne.style.display = 'block';
+                            });
+
+                            popupTriggerOne.addEventListener('mouseout', function () {
+                                popupContainerOne.style.display = 'none';
+                            });
+
+                            popupContainerOne.addEventListener('mouseover', function () {
+                                popupContainerOne.style.display = 'block';
+                            });
+
+                            popupContainerOne.addEventListener('mouseout', function () {
+                                popupContainerOne.style.display = 'none';
+                            });
+
+                        </script>
+
+
                     </div>
 
-                    <div>
+
+                    <div style="  padding-bottom: 25px;">
                         <h2 class="timeline__item timeline__item--year">December 2021</h2>
+                    </div>
+                    <div style="  padding-top: 25px;">
+                        <h2 class="timeline__item timeline__item--year">September 2021</h2>
                     </div>
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                            href="https://github.com/neversettlejay/ecommerce-springboot-react">
+                            href="https://github.com/neversettlejay/E-commerce-angular-springboot">
                             <h3 class="timeline__title">E-commerce application</h3>
                             <h3 class="timeline__title__genre">Project</h3>
                             <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
                             <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                            <p class="timeline__blurb">Created an E-commerce website using React JS, Spring Boot and SQL
-                                database.</p>
+                            <p class="timeline__blurb">I created an E-commerce website using Angular, Spring Boot, and
+                                SQL database. The frontend was built using Angular and allowed users to browse
+                                products, add items to their cart, and make purchases. The backend was built using
+                                Spring Boot and included a SQL database to store product information and user data
+                                securely. Spring Security was used to manage user authentication and authorization. This
+                                project provided valuable experience in web application development, user interface
+                                design, and database management using Angular, Spring Boot, and SQL.</p><br>
                             <div style="padding-top: inherit;">
                                 <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
                                 <div style=" text-align: center; position: relative;">
-                                    <img src="images/react.svg" width="110" height="50">
+                                    <img src="images/angular.svg" width="110" height="50">
                                     <img src="images/spring.svg" width="50" height="50">
                                     <img src="images/postgre.svg" width="110" height="50">
                                 </div>
@@ -236,13 +486,20 @@
 
                     <div class="timeline__item">
                         <a style="color: inherit;" target="_blank"
-                            href="https://drive.google.com/file/d/1g5HO76BZ245bAYtdJv_vgi6HYgmYObxF/view?usp=sharing">
+                            href="https://drive.google.com/file/d/1tzHZoNOUIkp0_zIrFGmqm_RhC9E98ZM6/view?usp=sharing">
                             <h3 class="timeline__title">AM/NS India</h3>
                             <h3 class="timeline__title__genre">Internship</h3>
                             <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
                             <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                            <p class="timeline__blurb">Created complaint management module using React JS and Django.
-                            </p>
+                            <p class="timeline__blurb">I developed a grievance management module using React JS and
+                                Django. The frontend was built using React JS and provided a user-friendly interface for
+                                submitting and tracking grievances. The backend was built using Django and included a
+                                database management system to store and retrieve grievance data. The backend also
+                                included an admin dashboard for authorized personnel to track the status of grievances
+                                and resolve them in a timely manner. This project provided valuable experience in web
+                                application development, user interface design, and database management using React JS,
+                                Django and MySQL.
+                            </p><br>
                             <div style="padding-top: inherit;">
                                 <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
                                 <div style=" text-align: center; position: relative;">
@@ -268,9 +525,18 @@
                             <h3 class="timeline__title__genre">Project</h3>
                             <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
                             <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                            <p class="timeline__blurb">Used PlantVillage dataset that includes 38 classes of plants and
-                                it's
-                                diseases. Used CNN to create a model and deployed it using Node JS.</p>
+                            <p class="timeline__blurb">The PlantVillage dataset, consisting of 38 classes of plants and
+                                their diseases, was used to create a Convolutional Neural Network (CNN) model for image
+                                classification. The model was trained using the dataset and optimized for accuracy
+                                through hyperparameter tuning.
+
+                                To deploy the model, a RESTful API was created using Node.js. Users could submit plant
+                                images to the API for classification and receive a predicted class of the plant's
+                                disease. The application was containerized using Docker and deployed on a cloud-based
+                                platform, allowing easy accessibility.
+
+                                This project provided valuable experience in machine learning, deep learning, and web
+                                application development using Node.js and Docker.</p><br>
                             <div style="padding-top: inherit;">
                                 <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
                                 <div style=" text-align: center; position: relative;">
@@ -298,8 +564,13 @@
                             <h3 class="timeline__title__genre">Project</h3>
                             <!-- <h3 class="timeline__title__date">April 2020 - June 2020</h3> -->
                             <!-- <h3 class="timeline__title"><b>Project</b>: Plant Disease Classification</h3> -->
-                            <p class="timeline__blurb">Created a web application that manages and verifies donated
-                                medicines.</p>
+                            <p class="timeline__blurb">As part of the NGO Medicine Portal project, I created a web
+                                application that managed and verified donated medicines for an NGO. The application was
+                                built using HTML, CSS, JavaScript, and PHP. It included inventory management, expiry
+                                date tracking, and medicine authenticity verification. I designed and implemented a
+                                database management system that accurately tracked and verified all donated medicines.
+                                The web application improved the efficiency and transparency of the NGO's operations,
+                                enabling them to provide better care to their patients.</p><br>
                             <div style="padding-top: inherit;">
                                 <!-- <h3 class="timeline__title__genre">Tech stack</h3> -->
                                 <div style=" text-align: center; position: relative;">
@@ -313,7 +584,7 @@
 
                     <h2 class="timeline__item timeline__item--year">April 2020</h2>
                     <div style="  padding-top: 25px;">
-                        <h2 class="timeline__item timeline__item--year">...</h2>
+                        <h2 class="timeline__item timeline__item--year">Past</h2>
                     </div>
 
                     <!-- <section>
