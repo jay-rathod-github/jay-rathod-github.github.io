@@ -190,3 +190,23 @@ a.forEach(item => {
 //   // pupil.style.transformOrigin = `10px center`;
 // });
 
+          // Define an array of image URLs
+          var images = [
+            "https://drive.google.com/uc?id=15d6BVmmb3iFBkEmSfPNXo_aDRskZnH8e",
+            "https://drive.google.com/uc?id=15X6G9ngXCwHEPiLIOlcOl2Ws1gvzXN-A",
+            "https://drive.google.com/uc?id=15bMGpJzRljUXUQHYggezXknVkjQDyUrL"
+        ];
+
+        // Preload all images in the array
+        images.forEach(function (url) {
+            var img = new Image();
+            img.src = url;
+        });
+
+        // Change the image when someone hovers over it
+        var slideIndex = 0;
+        var slideshowImg = document.getElementById("slideshow-img");
+        slideshowImg.addEventListener("mouseover", function () {
+            slideIndex = (slideIndex + 1) % images.length;
+            slideshowImg.src = images[slideIndex];
+        });
