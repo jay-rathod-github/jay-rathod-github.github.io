@@ -127,7 +127,74 @@
                     </script>
 
 
-
+<style>
+    .console {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 10px;
+      border-radius: 5px;
+      border: 2px solid #ccc;
+      margin: 10px;
+      position: relative;
+    }
+    
+    .console:hover .pointer {
+      transform: translateX(100%);
+    }
+    
+    .console-line {
+      display: block;
+      margin: 5px 0;
+      white-space: pre-wrap;
+      position: relative;
+    }
+    
+    .pointer {
+      display: inline-block;
+      width: 8px;
+      height: 20px;
+      margin-left: 5px;
+      background-color: crimson;
+      animation: blink 1s infinite;
+      position: absolute;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .console {
+        font-size: 14px;
+        padding: 5px;
+        margin: 5px;
+      }
+      
+      .console-line {
+        font-size: 12px;
+        margin: 3px 0;
+      }
+      
+      .pointer {
+        height: 16px;
+      }
+    }
+    
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+    
+    </style>
+    
+    <div class="console">
+        <span class="console-line">> Skilled backend developer with 2 years of experience in developing scalable and efficient applications using Spring Boot framework.</span>
+      <br>  <span class="console-line">> At Simform Solutions, I have designed and implemented RESTful APIs, integrated with various third-party services, and maintained robust codebases to support mission-critical business operations.</span>
+       <br> <span class="console-line">> I am passionate about delivering high-quality software solutions that meet business requirements and strive to continuously improve my skills and knowledge in the ever-evolving technology landscape.<span class="pointer"></span></span>
+    </div>
+    
 
 
                     <!-- <img id="slideshow-img"
@@ -167,7 +234,6 @@
                         }
                     </style>
 
-                    <div class="textIntro text"><span class="typing-2" style="font-size: 20px;"></span></div>
 
                     <div><br></div>
 
@@ -379,11 +445,13 @@
                         <div class="popup-container-one">
                             <div class="popup-content-one">
                                 <div class="popup-row-one">
-                                    <a href="https://github.com/neversettlejay/Proffer" target="_blank"><b>Source code</b></a>
+                                    <a href="https://github.com/neversettlejay/Proffer" target="_blank"><b>Source
+                                            code</b></a>
                                 </div>
                                 <div class="popup-row-one"><a
-                                        href="https://drive.google.com/file/d/1WbE514wzqOd-dtnpsYRJxtWaMBJ1dbT6/view?usp=sharing" target="_blank"><b>Training
-                                        completion certificate</b></a>
+                                        href="https://drive.google.com/file/d/1WbE514wzqOd-dtnpsYRJxtWaMBJ1dbT6/view?usp=sharing"
+                                        target="_blank"><b>Training
+                                            completion certificate</b></a>
                                 </div>
                             </div>
                         </div>
@@ -779,7 +847,7 @@
                         <div class="line grpc"></div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>

@@ -81,23 +81,23 @@ $(document).ready(function(){
         loop: true
     });
 
-    var typed = new Typed(".typing-2", {
-      strings: ["Skilled backend developer with 2 years of experience in developing scalable and efficient applications using Spring Boot framework. At Simform Solutions, I have designed and implemented RESTful APIs, integrated with various third-party services, and maintained robust codebases to support mission-critical business operations. I am passionate about delivering high-quality software solutions that meet business requirements and strive to continuously improve my skills and knowledge in the ever-evolving technology landscape."],
-      typeSpeed: 10,
-      backSpeed: 5,
-      loop: false,
+    // var typed = new Typed(".typing-2", {
+    //   strings: ["Skilled backend developer with 2 years of experience in developing scalable and efficient applications using Spring Boot framework. At Simform Solutions, I have designed and implemented RESTful APIs, integrated with various third-party services, and maintained robust codebases to support mission-critical business operations. I am passionate about delivering high-quality software solutions that meet business requirements and strive to continuously improve my skills and knowledge in the ever-evolving technology landscape."],
+    //   typeSpeed: 10,
+    //   backSpeed: 5,
+    //   loop: false,
 
 
      
-      preStringTyped: function() {
-        var element = document.querySelector(".typing-2");
-        element.style.background = "-webkit-linear-gradient(right, crimson, white)";
-        element.style.webkitBackgroundClip = "text";
-        element.style.webkitTextFillColor = "transparent";
-      }
+    //   preStringTyped: function() {
+    //     var element = document.querySelector(".typing-2");
+    //     element.style.background = "-webkit-linear-gradient(right, crimson, white)";
+    //     element.style.webkitBackgroundClip = "text";
+    //     element.style.webkitTextFillColor = "transparent";
+    //   }
       
       
-    });
+    // });
     
 
     // owl carousel script
