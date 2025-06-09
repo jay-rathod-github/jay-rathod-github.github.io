@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Enterprise Network Infrastructure Design | CCNA Capstone</title>
+    <meta content="CCNA-level capstone project designing a secure dual-stack enterprise network infrastructure" name="description">
+    <meta content="CCNA, networking, IPv6, VLAN, OSPF, HSRP, network security" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-purple: #8A2BE2;
+            --secondary-purple: #A45AFF;
+            --dark-bg: #0a192f;
+            --light-bg: #112240;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e6f1ff;
+        }
+
+        #portfolio-details {
+            padding: 80px 0;
+        }
+
+        .portfolio-info {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .portfolio-info h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+
+        .project-meta {
+            color: var(--secondary-purple);
+            margin-bottom: 25px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .tech-item {
+            background: rgba(138, 43, 226, 0.1);
+            color: var(--secondary-purple);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(164, 90, 255, 0.3);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: var(--primary-purple);
+            margin-right: 10px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .project-link.primary {
+            background: var(--primary-purple);
+            color: #fff;
+        }
+
+        .project-link.secondary {
+            border: 2px solid var(--primary-purple);
+            color: var(--primary-purple);
+        }
+
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .network-diagram {
+            background: rgba(138, 43, 226, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        .tech-category {
+            margin: 30px 0 15px 0;
+            color: var(--primary-purple);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .responsibilities {
+            margin-top: 30px;
+        }
+
+        .protocol-badge {
+            display: inline-block;
+            background: rgba(164, 90, 255, 0.2);
+            color: var(--secondary-purple);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            margin: 0 2px;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-info {
+                padding: 25px;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Portfolio Details ======= -->
+    <main id="main">
+        <div id="portfolio-details" class="portfolio-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 portfolio-info">
+                        <h2>ENTERPRISE NETWORK INFRASTRUCTURE DESIGN</h2>
+                        <div class="project-meta">
+                            CCNA-LEVEL CAPSTONE PROJECT | Feb 2025 – Present
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-item">Cisco IOS</span>
+                            <span class="tech-item">IPv4/IPv6</span>
+                            <span class="tech-item">VLAN</span>
+                            <span class="tech-item">OSPF</span>
+                            <span class="tech-item">HSRP</span>
+                            <span class="tech-item">EtherChannel</span>
+                            <span class="tech-item">WLC</span>
+                            <span class="tech-item">LWAP</span>
+                        </div>
+
+                        <div class="network-diagram">
+                            <h4><i class="ri-node-tree"></i> Network Architecture</h4>
+                            <p>Designed a secure dual-stack (<span class="protocol-badge">IPv4</span>/<span class="protocol-badge">IPv6</span>) enterprise network featuring <span class="protocol-badge">VLAN</span> segmentation, <span class="protocol-badge">OSPF</span> dynamic routing, and <span class="protocol-badge">HSRP</span> redundancy. Implemented <span class="protocol-badge">EtherChannel</span> (PAgP/LACP) for link aggregation and comprehensive security measures including <span class="protocol-badge">ACL</span>, <span class="protocol-badge">port security</span>, and <span class="protocol-badge">DHCP snooping</span>.</p>
+                        </div>
+
+                        <div class="responsibilities">
+                            <h4 style="color: var(--primary-purple);">Key Implementations:</h4>
+                            <ul class="feature-list">
+                                <li><i class="ri-shield-keyhole-line"></i> Designed secure dual-stack network architecture using <span class="protocol-badge">IPv4</span>/<span class="protocol-badge">IPv6</span> with <span class="protocol-badge">VLAN</span> segmentation and <span class="protocol-badge">OSPF</span> routing</li>
+                                <li><i class="ri-server-line"></i> Configured <span class="protocol-badge">HSRP</span> for gateway redundancy and <span class="protocol-badge">EtherChannel</span> (PAgP/LACP) for bandwidth aggregation</li>
+                                <li><i class="ri-dashboard-line"></i> Implemented network services including <span class="protocol-badge">DHCP</span>, <span class="protocol-badge">DNS</span>, <span class="protocol-badge">NAT</span>, and monitoring via <span class="protocol-badge">SNMP</span>/<span class="protocol-badge">Syslog</span></li>
+                                <li><i class="ri-lock-line"></i> Secured infrastructure with <span class="protocol-badge">ACLs</span>, port security, <span class="protocol-badge">DHCP snooping</span>, and <span class="protocol-badge">DAI</span></li>
+                                <li><i class="ri-wifi-line"></i> Configured enterprise <span class="protocol-badge">WLAN</span> with <span class="protocol-badge">WLC</span> and <span class="protocol-badge">LWAP</span> for wireless access</li>
+                                <li><i class="ri-bug-line"></i> Conducted comprehensive testing and validation of all network components</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="tech-category">Core Technologies:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-item">Cisco Routers</span>
+                            <span class="tech-item">Cisco Switches</span>
+                            <span class="tech-item">Dynamic Routing</span>
+                            <span class="tech-item">Network Security</span>
+                            <span class="tech-item">Wireless Controllers</span>
+                            <span class="tech-item">Packet Tracer/GNS3</span>
+                        </div>
+
+                        <h4 style="color: var(--primary-purple); margin-top: 30px;">Project Description:</h4>
+                        <p>
+                            This CCNA-level capstone project involved designing and implementing a comprehensive enterprise network infrastructure from the ground up. The design incorporates modern networking best practices including dual-stack (IPv4/IPv6) support, VLAN segmentation for traffic isolation, and dynamic routing with OSPF for efficient path selection.
+                        </p>
+                        <p>
+                            The network features robust redundancy through HSRP for gateway failover and EtherChannel for link aggregation. Security was implemented at multiple layers including port security, DHCP snooping, Dynamic ARP Inspection (DAI), and access control lists. Wireless access was integrated via Cisco Wireless LAN Controller (WLC) and Lightweight Access Points (LWAP) with appropriate security measures.
+                        </p>
+                        <p>
+                            The project demonstrates mastery of CCNA-level networking concepts including IP addressing schemes, VLAN trunking, inter-VLAN routing, dynamic routing protocols, network services (DHCP, DNS, NAT), and comprehensive network security implementations.
+                        </p>
+
+                        <div class="project-links">
+                            <a href="https://github.com/neversettlejay/networkInfra_ccna" target="_blank" class="project-link primary">
+                                <i class="ri-map-2-line" style="margin-right: 8px;"></i> View Network Diagram and Configuration Files
+                            </a>
+                            <!-- <a href="YOUR_CONFIGURATION_LINK" target="_blank" class="project-link secondary">
+                                <i class="ri-terminal-box-line" style="margin-right: 8px;"></i> View Configuration Files
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Portfolio Details -->
+    </main><!-- End #main -->
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="../assets/vendor/venobox/venobox.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
