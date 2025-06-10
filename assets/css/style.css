@@ -764,7 +764,17 @@ body {
 	.section-title h2 {
 		font-size: 2.8rem;
 		/* Adjusted for smaller desktops */
+		white-space: normal;
+		/* allow text to wrap */
+		word-break: break-word;
+		/* optional: break long words */
+		line-height: 1.2;
+		/* improve spacing between lines */
+		text-align: center;
+		/* optional: center for better UX on small screens */
+
 	}
+
 
 	.skills-container {
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1377,36 +1387,101 @@ body {
 	color: #12d640;
 }
 
+
 /*--------------------------------------------------------------
-# Education
+# Education & Certifications Section
 --------------------------------------------------------------*/
 
-/* Custom Dark Theme Styles */
+/* Main container for the certification card */
 .certification-card {
-	transition: transform 0.3s ease;
-	border-radius: 8px;
+	background-color: #1a2a3a;
+	/* Matching your skills card background */
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	/* Added border-color to the transition for a smoother effect */
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .certification-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 10px 20px rgba(0, 150, 255, 0.1);
+	transform: translateY(-8px);
+	/* --- THE FIX --- */
+	/* Switched to a subtle blue glow that matches the background theme */
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 25px rgba(0, 162, 255, 0.5);
+	border-color: #00a2ff;
+	/* Using a blue accent color found elsewhere in your theme */
 }
 
-.certification-img {
-	height: 180px;
+/* Container for the image to handle aspect ratio */
+.certification-img-container {
+	aspect-ratio: 16 / 9;
+	background-color: #ffffff;
+	/* White background for logos */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
 	overflow: hidden;
 }
 
-.certification-img img {
-	transition: transform 0.5s ease;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.certification-img-container img {
+	object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
+	transition: transform 0.4s ease;
 }
 
-.certification-card:hover .certification-img img {
+.certification-card:hover .certification-img-container img {
 	transform: scale(1.05);
+}
+
+/* Styling for the content area of the card */
+.certification-content {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+
+.certification-content h4 {
+	font-family: "Poppins", sans-serif;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.certification-content p {
+	color: #a0aec0;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+/* The "View" button still uses the primary green on hover, maintaining a consistent call-to-action color */
+.certification-content .btn-view-cert {
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid #1c7d32;
+	color: #fff;
+	padding: 8px 20px;
+	border-radius: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 14px;
+	transition: all 0.3s ease;
+	align-self: flex-start;
+}
+
+.certification-content .btn-view-cert:hover {
+	background-color: #1c7d32;
+	color: #fff;
+	text-decoration: none;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(18, 214, 64, 0.3);
 }
 
 /*--------------------------------------------------------------
