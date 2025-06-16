@@ -1052,6 +1052,103 @@ body {
 	word-break: break-all;
 }
 
+ /*- Email Me Form------------------------------------------------*/
+        .email-form-container {
+            margin-top: 30px;
+        }
+
+        .email-form {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+        }
+
+        .email-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .email-form .form-control {
+            border-radius: 10px;
+            box-shadow: none;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            color: #fff;
+        }
+
+        .email-form .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.11);
+            border-color: #18d26e;
+            box-shadow: none;
+        }
+
+        .email-form .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+            opacity: 1;
+        }
+
+        .email-form button[type=submit] {
+            background: #18d26e;
+            border: 0;
+            padding: 12px 35px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .email-form button[type=submit]:hover {
+            background: #15bb62;
+            transform: translateY(-2px);
+        }
+        
+        .email-form .loading, .email-form .error-message, .email-form .sent-message {
+            display: none;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            border-radius: 15px;
+            margin: 15px 0;
+        }
+        
+        .email-form .loading {
+             background: rgba(255, 255, 255, 0.1);
+        }
+
+        .email-form .error-message {
+            background: #ed3c0d;
+        }
+
+        .email-form .sent-message {
+            background: #18d26e;
+        }
+        
+        .email-form .loading:before {
+            content: "";
+            display: inline-block;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            margin: 0 10px -6px 0;
+            border: 3px solid #18d26e;
+            border-top-color: #333;
+            animation: animate-loading 1s linear infinite;
+        }
+
+        @keyframes animate-loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
 .left-panel-section {
 	margin-bottom: 2.5rem;
 }
